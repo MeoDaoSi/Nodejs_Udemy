@@ -1,3 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333333;
+    font-family: arial;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* max-width: 90%; */
+}
+
 ul {
     margin: 0px;
     padding: 0px;
@@ -192,4 +203,8 @@ ul {
 .footer-menu li a {
     font-size: 14px;
     color: #878787;
+}
+
+.main-content{
+    flex-grow: 1;
 }
