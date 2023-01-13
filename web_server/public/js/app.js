@@ -1,11 +1,9 @@
-console.log('Hello');
+const formW = document.querySelector('.formWeather')
+const inputValue = document.querySelector('.inputWeather')
 
-fetch('https://puzzle.mead.io/puzzle')
-    .then( response => response.json() )
-    .then( data => console.log(data) )
-// const formW = document.querySelector('.formWeather')
-
-// formW.addEventListener('submit' , (e) => {
-//     e.preventDefault();
-//     console.log('test');
-// })
+formW.addEventListener('submit' , (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:3000/weather?address=${inputValue.value}`)
+        .then( response => response.json() )
+        .then( data => console.log(data) )
+})
